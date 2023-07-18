@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json.schemastore.org/eslintrc.json",
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "parser": "typescript"
+      },
+      {
+        "usePrettierrc": false,
+        "fileInfoOptions": {
+          "withNodeModules": true
+        }
+      }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "useEditorConfig": true
+  },
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "overrides": [
+    {
+      "files": ["*.mts", "*.ts", "*.tsx"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-type-checked",
+        "plugin:@typescript-eslint/stylistic",
+        "plugin:@typescript-eslint/stylistic-type-checked"
+      ],
+      "rules": {
+        "sort-keys": "off",
+        "@typescript-eslint/sort-type-constituents": "error",
+        "key-spacing": "off",
+        "@typescript-eslint/key-spacing": ["error", { "align": "colon" }]
+      },
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      },
+      "overrides": [
+        {
+          "files": ["*.test.ts", "*.test.mts"],
+          "rules": {
+            "@typescript-eslint/no-floating-promises": "off"
+          }
+        }
+      ]
+    }
+  ]
+}

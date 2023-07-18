@@ -1,0 +1,20 @@
+{
+  "display": "Ice",
+  "extends": "@tsconfig/esm/tsconfig.json",
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"],
+  "compilerOptions": {
+    "noEmit": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@module/*": ["src/module/*"]
+    },
+    "types": ["node"],
+
+    "target": "esnext",
+    "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true
+  }
+}

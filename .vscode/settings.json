@@ -1,0 +1,28 @@
+{
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.validate.enable": true,
+
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "editor.formatOnSave": true, // optional
+  "editor.formatOnSaveMode": "file",
+  "files.autoSave": "onFocusChange",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": false,
+    "source.sortMembers": true
+  },
+
+  "eslint.format.enable": true,
+  "eslint.validate": ["javascript", "typescript"],
+  "eslint.rules.customizations": [
+    { "rule": "prettier/prettier", "severity": "info" },
+    { "rule": "@typescript-eslint/no-unused-vars", "severity": "info" },
+    { "rule": "@typescript-eslint/no-empty-function", "severity": "off" }
+  ],
+
+  "search.exclude": {
+    "**/node_modules": true
+  }
+}
