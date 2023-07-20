@@ -38,6 +38,7 @@
       ],
       "rules": {
         "sort-keys": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/sort-type-constituents": "error",
         "key-spacing": "off",
         "@typescript-eslint/key-spacing": ["error", { "align": "colon" }]

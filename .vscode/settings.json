@@ -1,19 +1,40 @@
 {
   "typescript.referencesCodeLens.enabled": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.validate.enable": true,
+  "typescript.enablePromptUseWorkspaceTsdk": true,
 
-  "editor.formatOnPaste": false,
-  "editor.formatOnType": false,
-  "editor.formatOnSave": true, // optional
-  "editor.formatOnSaveMode": "file",
+  "typescript.suggest.autoImports": false,
+  "typescript.suggest.completeFunctionCalls": true,
+
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+  "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
+
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true,
+
+  "editor.suggest.showKeywords": false,
+  "editor.suggest.showDeprecated": false,
+  "editor.suggest.filterGraceful": false,
+  "editor.suggest.showCustomcolors": false,
+  "editor.suggest.showFunctions": false,
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.suggest.showModules": false,
+  "editor.suggest.showWords": false,
+
+  "editor.formatOnSave": true,
+  "editor.suggest.preview": true,
   "files.autoSave": "onFocusChange",
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": false,
     "source.sortMembers": true
   },
-
+  
   "eslint.format.enable": true,
   "eslint.validate": ["javascript", "typescript"],
   "eslint.rules.customizations": [

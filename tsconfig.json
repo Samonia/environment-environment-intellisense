@@ -1,19 +1,12 @@
 {
   "display": "Ice",
-  "extends": "@tsconfig/esm/tsconfig.json",
+  "extends": "@tsconfig/node20/tsconfig.json",
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"],
   "compilerOptions": {
-    "noEmit": true,
-    "strict": true,
-    "baseUrl": ".",
-    "paths": {
-      "@module/*": ["src/module/*"]
-    },
-    "types": ["node"],
+    "types": ["node/console", "node/assert", "node/fs/promises", "node/timers", "node/path", "node/test"],
 
-    "target": "esnext",
-    "moduleResolution": "nodenext",
+    "noEmit": true,
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true
   }
